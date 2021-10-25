@@ -1,0 +1,56 @@
+<!-- Created by Kunal -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="Calculator.css">
+    <script type="text/javascript">
+        function sq() {
+            cal.display.value=Math.sqrt(cal.display.value)
+        }
+        function Jnjel() {
+            let str = cal.display.value.slice(0, cal.display.value.length - 1);
+            cal.display.value = str;
+        }
+    </script>
+</head>
+<body>
+    <div class="conteiner">
+        <form name="cal">
+        <input type="text" disabled name="display">
+        <br><br>
+        <input type="button" value="C" onclick ="cal.display.value=''">
+        <input type="button" value="&#8592;" onclick="Jnjel()">
+        <input type="button" value="(" onclick ="cal.display.value+='('">
+        <input type="button" value=")" onclick ="cal.display.value+=')'">
+        <input type="button" value="%" onclick ="cal.display.value+='%'">
+        <br><br>
+        <input type="button" value ="7" onclick ="cal.display.value+='7'">
+        <input type="button" value ="8" onclick ="cal.display.value+='8'">
+        <input type="button" value ="9" onclick ="cal.display.value+='9'">
+        <input type="button" value="+" onclick ="cal.display.value+='+'">
+        <input type="button" value="-" onclick ="cal.display.value+='-'">
+        <br><br>
+        <input type="button" value="4" onclick ="cal.display.value+='4'">
+        <input type="button" value="5" onclick ="cal.display.value+='5'">
+        <input type="button" value="6" onclick ="cal.display.value+='6'">
+        <input type="button" value="&times;" onclick ="cal.display.value+='*'">
+        <input type="button" value="&divide;" onclick="cal.display.value+='/'">
+        <br><br>
+        <input type="button" value="1" onclick ="cal.display.value+='1'">
+        <input type="button" value="2" onclick ="cal.display.value+='2'">
+        <input type="button" value="3" onclick ="cal.display.value+='3'">
+        <input type="button" value="&#8730;" onclick="sq()">
+        <input type="button" value="**" onclick="cal.display.value+='**'">
+        <br><br>
+        <input type="button" value="." onclick ="cal.display.value+='.'">
+        <input type="button" value="0" onclick ="cal.display.value+='0'">
+        <input type="button" value="=" onclick ="cal.display.value =eval(cal.display.value)">
+        <input type="button" value="*2" onclick="cal.display.value+='**2'">
+        <input type="button" value="*3" onclick="cal.display.value+='**3'">
+        </form>
+    </div>
+</body>
+</html>
